@@ -3,7 +3,7 @@ on:
   push:
 jobs:
   code:
-    uses: ./.github/workflows/code.yaml
+    uses: ./.github/workflows/code1.yaml
   build:
     needs: code
     uses: ./.github/workflows/build.yaml
