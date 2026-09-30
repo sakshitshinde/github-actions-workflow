@@ -1,0 +1,9 @@
+name: deploy
+on:
+  workflow_call: 
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deply code
+        run: echo " code deploy to aws ec2 instance"
