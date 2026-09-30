@@ -3,7 +3,11 @@ on:
   workflow_call: 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
+      - name: code clone
+        uses: actions/checkout@v7
+      - name: Deploy via nginx
+        run: cp index.html /usr/share/nginx/html
       - name: deply code
         run: echo " code deploy to aws ec2 instance"
