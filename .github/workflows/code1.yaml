@@ -1,6 +1,6 @@
 name: code
 on:
-  push:
+  workflow_call:
 jobs:
   code-checkout:
     runs-on: ubuntu-latest
