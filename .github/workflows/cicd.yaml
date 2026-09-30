@@ -1,6 +1,6 @@
 name: CICD Pipeline 
 on:
-   workflow_call:
+   push: 
 jobs:
   code:
     uses: ./.github/workflows/code1.yaml
