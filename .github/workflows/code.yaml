@@ -9,4 +9,4 @@ jobs:
         uses: actions/checkout@v7
 
       - name: print message
-        run: echo "github actions"
+        run: echo "github actions."
