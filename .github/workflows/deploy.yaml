@@ -14,10 +14,10 @@ jobs:
  
       - name: Deploy via nginx
         run: |
-          sudo cp index.html /usr/share/nginx/html/index.html
-          sudo chown root:root /usr/share/nginx/html/index.html
-          sudo chmod 644 /usr/share/nginx/html/index.html
+          sudo rm -f /usr/share/nginx/html/index.html
+          sudo cp .github/workflows/index.html /usr/share/nginx/html/index.html
           sudo systemctl restart nginx
+
 
       - name: Deploy code
         run: echo "Code deployed to AWS EC2 instance"
