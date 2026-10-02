@@ -11,10 +11,12 @@ jobs:
       - name: Code clone
         uses: actions/checkout@v4
 
+ 
       - name: Deploy via nginx
         run: |
-          sudo rm -f /usr/share/nginx/html/index.html
-          sudo cp .github/workflows/index.html /usr/share/nginx/html/index.html
+          sudo cp index.html /usr/share/nginx/html/index.html
+          sudo chown root:root /usr/share/nginx/html/index.html
+          sudo chmod 644 /usr/share/nginx/html/index.html
           sudo systemctl restart nginx
 
       - name: Deploy code
